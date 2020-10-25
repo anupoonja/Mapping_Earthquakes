@@ -48,9 +48,14 @@ let overlays = {
   "Major Earthquakes": majorEQ
 };
 
+// Provide options to expand
+var options = {
+  collapsed:false
+};
+
 // Then we add a control to the map that will allow the user to change which
 // layers are visible.
-L.control.layers(baseMaps, overlays).addTo(map);
+L.control.layers(baseMaps, overlays, options).addTo(map);
 
 
 // Retrieve the earthquake GeoJSON data.
